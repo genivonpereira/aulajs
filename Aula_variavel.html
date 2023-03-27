@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Variáveis em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Variáveis em JavaScript</h1>
+    <p>Em JavaScript, existem três palavras-chave usadas para declarar variáveis: <code>let</code>, <code>var</code> e <code>const</code>.</p>
+    
+    <h2>let</h2>
+    <p>A palavra-chave <code>let</code> é usada para declarar variáveis ​​com escopo de bloco. As variáveis criadas com <code>let</code> só podem ser acessadas dentro do bloco onde foram criadas. Isso significa que se você criar uma variável <code>let</code> dentro de um bloco de código, ela não estará disponível fora desse bloco.</p>
+    <pre>
+      if (true) {
+        let x = 5;
+        console.log(x); // 5
+      }
+      console.log(x); // erro: x não está definido
+    </pre>
+    
+    <h2>var</h2>
+    <p>A palavra-chave <code>var</code> é usada para declarar variáveis com escopo de função ou escopo global. As variáveis criadas com <code>var</code> podem ser acessadas em qualquer lugar da função onde foram criadas. Se uma variável <code>var</code> for criada fora de uma função, ela terá escopo global e poderá ser acessada em qualquer lugar do seu código.</p>
+    <pre>
+      function teste() {
+        var x = 5;
+        console.log(x); // 5
+      }
+      console.log(x); // erro: x não está definido
+    </pre>
+    <pre>
+      var x = 5; // variável global
+
+      function teste() {
+        console.log(x); // 5
+      }
+      teste();
+    </pre>
+    
+    <h2>const</h2>
+    <p>A palavra-chave <code>const</code> é usada para declarar variáveis com valores constantes. Uma vez que uma variável é atribuída com <code>const</code>, seu valor não pode ser alterado. Variáveis criadas com <code>const</code> têm escopo de bloco, assim como as criadas com <code>let</code>.</p>
+    <pre>
+      const PI = 3.14;
+      PI = 3; // erro: PI não pode ser alterado
+    </pre>
+    <pre>
+      if (true) {
+        const x = 5;
+        console.log(x); // 5
+      }
+      console.log(x); // erro: x não está definido
+    </pre>
+    <footer>Criado por Genivon Pereira</footer>
+  </body>
+</html>
+
